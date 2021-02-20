@@ -9,4 +9,5 @@
 
 	<!-- Define your Beans here -->
 
+	<bean id="coach" class="com.hakiemra.ch04.BaseballCoach"></bean>
 </beans>
