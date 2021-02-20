@@ -4,7 +4,7 @@ public class MyApp { // Run as Java Application
 	
 	public static void main(String[] args) {
 		// Create Object
-		BaseballCoach theCoach = new BaseballCoach();
+		Coach theCoach = new BaseballCoach();
 		
 		// Use Methods of Object
 		System.out.println(theCoach.getDailyWorkout());
