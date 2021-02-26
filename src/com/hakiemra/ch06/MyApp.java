@@ -16,11 +16,21 @@ public class MyApp { // Run as Java Application
 		// Retrieve Bean Object
 		Coach theCoach = context.getBean("coach", Coach.class); // Must be same with beans.id in XML config file
 		
+		Coach theCoach02 = context.getBean("coach", Coach.class);
+
+		Boolean compareInstance = (theCoach == theCoach02);
+
 		// Use Methods of Object
-		System.out.println(theCoach.getDailyWorkout());
-		System.out.println(theCoach.getDailyFortune());
-		System.out.println(theCoach.getName());
-		System.out.println(theCoach.getEmail());
+		// System.out.println(theCoach.getDailyWorkout());
+		// System.out.println(theCoach.getDailyFortune());
+		// System.out.println(theCoach.getName());
+		// System.out.println(theCoach.getEmail());
+
+		System.out.println("Object Hash value for theCoach: " + theCoach.toString());
+		System.out.println("Object Hash value for theCoach02: " + theCoach02.toString());
+		System.out.println("theCoach == theCoach02: " + compareInstance.toString());
+		System.out.println("Both theCoach and theCoach02 has the same Hash value so they are same object.");
+		System.out.println("It's called SINGLETON / Default Bean Scopes.");
 		
 		context.close();
 	}
