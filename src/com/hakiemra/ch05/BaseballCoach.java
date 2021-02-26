@@ -19,4 +19,12 @@ public class BaseballCoach implements Coach {
 	public String getDailyFortune() {
 		return this.fortuneService.getFortune();
 	}
+
+	public String getName() {
+        return null;
+    }
+
+    public String getEmail() {
+        return null;
+    }
 }
