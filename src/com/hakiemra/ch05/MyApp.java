@@ -18,6 +18,7 @@ public class MyApp { // Run as Java Application
 		
 		// Use Methods of Object
 		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyFortune());
 		
 		context.close();
 	}

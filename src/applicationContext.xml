@@ -9,5 +9,9 @@
 
 	<!-- Define your Beans here -->
 
-	<bean id="coach" class="com.hakiemra.ch05.TrackCoach"></bean>
+	<bean id="coach" class="com.hakiemra.ch05.TrackCoach">
+		<constructor-arg ref="fortuneService"></constructor-arg>
+	</bean>
+	
+	<bean id="fortuneService" class="com.hakiemra.ch05.HappyFortuneService"></bean>
 </beans>
