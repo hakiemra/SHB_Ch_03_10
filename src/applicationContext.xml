@@ -9,5 +9,5 @@
 
 	<!-- Define your Beans here -->
 
-	<bean id="coach" class="com.hakiemra.ch04.TrackCoach"></bean>
+	<bean id="coach" class="com.hakiemra.ch05.TrackCoach"></bean>
 </beans>
