@@ -27,6 +27,10 @@ public class CricketCoach implements Coach {
 		return this.fortuneService.getFortune();
 	}
 
+    public void doStartupStuff() {
+        System.out.println("Starting a CricketCoach Bean in LifeCycle");
+    }
+
     public void setName(String name) {
         this.name = name;
     }

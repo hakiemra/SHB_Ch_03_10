@@ -11,7 +11,7 @@
 
 	<!-- Define your Beans here -->
 
-	<bean id="coach" class="com.hakiemra.ch06.CricketCoach" scope="prototype">
+	<bean id="coach" class="com.hakiemra.ch06.CricketCoach" scope="prototype" init-method="doStartupStuff">
 		<!-- <constructor-arg ref="fortuneService"></constructor-arg> -->
 		<property name="fortuneServiceVal" ref="fortuneService"></property>
 		<property name="name" value="${ch06.coach.name}"></property>
