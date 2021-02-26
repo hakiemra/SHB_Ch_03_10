@@ -17,6 +17,7 @@
 		<property name="name" value="${ch06.coach.name}"></property>
 		<property name="email" value="${ch06.coach.email}"></property>
 	</bean>
+	<!-- Other Bean Scopes: request, session, global-session. -->
 	
 	<bean id="fortuneService" class="com.hakiemra.ch06.HappyFortuneService"></bean>
 </beans>
