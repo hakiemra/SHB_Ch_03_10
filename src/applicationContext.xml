@@ -7,13 +7,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:property-placeholder location="classpath:com/hakiemra/ch05/MyApp.properties"/>
+
 	<!-- Define your Beans here -->
 
 	<bean id="coach" class="com.hakiemra.ch05.CricketCoach">
 		<!-- <constructor-arg ref="fortuneService"></constructor-arg> -->
 		<property name="fortuneServiceVal" ref="fortuneService"></property>
-		<property name="name" value="myname"></property>
-		<property name="email" value="myname@gmail.com"></property>
+		<property name="name" value="${ch05.coach.name}"></property>
+		<property name="email" value="${ch05.coach.email}"></property>
 	</bean>
 	
 	<bean id="fortuneService" class="com.hakiemra.ch05.HappyFortuneService"></bean>
