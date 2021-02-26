@@ -31,6 +31,10 @@ public class CricketCoach implements Coach {
         System.out.println("Starting a CricketCoach Bean in LifeCycle");
     }
 
+    public void doCleanupStuff() {
+        System.out.println("Destroying a CricketCoach Bean in LifeCycle");
+    }
+
     public void setName(String name) {
         this.name = name;
     }
