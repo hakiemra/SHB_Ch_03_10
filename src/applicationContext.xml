@@ -9,7 +9,7 @@
 
 	<!-- Define your Beans here -->
 
-	<bean id="coach" class="com.hakiemra.ch05.TrackCoach">
+	<bean id="coach" class="com.hakiemra.ch05.BaseballCoach">
 		<constructor-arg ref="fortuneService"></constructor-arg>
 	</bean>
 	
