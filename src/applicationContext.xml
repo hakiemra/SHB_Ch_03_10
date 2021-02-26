@@ -12,6 +12,8 @@
 	<bean id="coach" class="com.hakiemra.ch05.CricketCoach">
 		<!-- <constructor-arg ref="fortuneService"></constructor-arg> -->
 		<property name="fortuneServiceVal" ref="fortuneService"></property>
+		<property name="name" value="myname"></property>
+		<property name="email" value="myname@gmail.com"></property>
 	</bean>
 	
 	<bean id="fortuneService" class="com.hakiemra.ch05.HappyFortuneService"></bean>
