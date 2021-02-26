@@ -12,8 +12,8 @@
 	<!-- Define your Beans here -->
 
 	<!-- destroy-method doesn't work when bean's scope is PROTOTYPE -->
-	<!-- https://stackoverflow.com/questions/16783552/destroy-method-is-not-working-in-spring-framework -->
-	<bean id="coach" class="com.hakiemra.ch06.CricketCoach" scope="prototype" init-method="doStartupStuff" destroy-method="doCleanupStuff">
+	<!-- PROBLEM is fixed in SINGLETON Bean's scope -->
+	<bean id="coach" class="com.hakiemra.ch06.CricketCoach" init-method="doStartupStuff" destroy-method="doCleanupStuff">
 		<!-- <constructor-arg ref="fortuneService"></constructor-arg> -->
 		<property name="fortuneServiceVal" ref="fortuneService"></property>
 		<property name="name" value="${ch06.coach.name}"></property>
