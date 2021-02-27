@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 public class CricketCoach implements Coach {
 
     // Define Private Field for Dependency Injection
+    @Autowired
 	private FortuneService fortuneService;
     private String name;
     private String email;
@@ -17,11 +18,11 @@ public class CricketCoach implements Coach {
     }
 
     // Using Constructor to do DI
-    @Autowired
-    public CricketCoach(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
-        System.out.println("Using @Autowired to do DI - Constructor Injection");
-    }
+    // @Autowired
+    // public CricketCoach(FortuneService fortuneService) {
+    //     this.fortuneService = fortuneService;
+    //     System.out.println("Using @Autowired to do DI - Constructor Injection");
+    // }
 
     // Using Setter Function to do DI
     // @Autowired
