@@ -2,7 +2,7 @@ package com.hakiemra.ch07;
 
 import org.springframework.stereotype.Component;
 
-@Component("coach")
+@Component
 public class CricketCoach implements Coach {
 
     // Define Private Field for Dependency Injection

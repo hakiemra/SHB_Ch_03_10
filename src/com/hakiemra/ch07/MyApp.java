@@ -14,9 +14,9 @@ public class MyApp { // Run as Java Application
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// Retrieve Bean Object
-		Coach theCoach = context.getBean("coach", Coach.class); // Must be same with beans.id in XML config file
+		Coach theCoach = context.getBean("cricketCoach", Coach.class); // Must be same with beans.id in XML config file
 		
-		Coach theCoach02 = context.getBean("coach", Coach.class);
+		Coach theCoach02 = context.getBean("cricketCoach", Coach.class);
 
 		Boolean compareInstance = (theCoach == theCoach02);
 
