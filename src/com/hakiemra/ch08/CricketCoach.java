@@ -16,11 +16,18 @@ public class CricketCoach implements Coach {
         System.out.println("CricketCoach constructor is called");
     }
 
-    // Using Setter Function to do DI
+    // Using Constructor to do DI
     @Autowired
-    public void setFortuneServiceVal(FortuneService fortuneService) {
+    public CricketCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
+        System.out.println("Using @Autowired to do DI - Constructor Injection");
     }
+
+    // Using Setter Function to do DI
+    // @Autowired
+    // public void setFortuneServiceVal(FortuneService fortuneService) {
+    //     this.fortuneService = fortuneService;
+    // }
 
 	@Override
 	public String getDailyWorkout() {
