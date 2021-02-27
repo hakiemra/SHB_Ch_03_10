@@ -7,19 +7,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:component-scan base-package="com.hakiemra.ch07" />
 	<context:property-placeholder location="classpath:com/hakiemra/ch07/MyApp.properties"/>
 
 	<!-- Define your Beans here -->
 
-	<!-- destroy-method doesn't work when bean's scope is PROTOTYPE -->
-	<!-- PROBLEM is fixed in SINGLETON Bean's scope -->
-	<bean id="coach" class="com.hakiemra.ch07.CricketCoach" init-method="doStartupStuff" destroy-method="doCleanupStuff">
-		<!-- <constructor-arg ref="fortuneService"></constructor-arg> -->
-		<property name="fortuneServiceVal" ref="fortuneService"></property>
-		<property name="name" value="${ch07.coach.name}"></property>
-		<property name="email" value="${ch07.coach.email}"></property>
-	</bean>
-	<!-- Other Bean Scopes: request, session, global-session. -->
-	
-	<bean id="fortuneService" class="com.hakiemra.ch07.HappyFortuneService"></bean>
 </beans>
