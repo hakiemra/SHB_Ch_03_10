@@ -1,5 +1,6 @@
 package com.hakiemra.ch08;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,6 +17,7 @@ public class CricketCoach implements Coach {
     }
 
     // Using Setter Function to do DI
+    @Autowired
     public void setFortuneServiceVal(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
