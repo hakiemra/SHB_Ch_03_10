@@ -9,7 +9,7 @@ public class CricketCoach implements Coach {
 
     // Define Private Field for Dependency Injection
     @Autowired
-    @Qualifier("happyFortuneService")
+    @Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
     private String name;
     private String email;
