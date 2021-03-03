@@ -2,9 +2,11 @@ package com.hakiemra.ch09;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("singleton")
 public class CricketCoach implements Coach {
 
     // Define Private Field for Dependency Injection
