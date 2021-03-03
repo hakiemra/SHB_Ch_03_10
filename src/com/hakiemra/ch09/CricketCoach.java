@@ -1,14 +1,13 @@
 package com.hakiemra.ch09;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class CricketCoach implements Coach {
 
     // Define Private Field for Dependency Injection
@@ -51,6 +50,7 @@ public class CricketCoach implements Coach {
         System.out.println("Starting a CricketCoach Bean in LifeCycle");
     }
 
+    @PreDestroy
     public void doCleanupStuff() {
         System.out.println("Destroying a CricketCoach Bean in LifeCycle");
     }
