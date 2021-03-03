@@ -1,5 +1,6 @@
 package com.hakiemra.ch10;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyApp { // Run as Java Application
@@ -11,7 +12,7 @@ public class MyApp { // Run as Java Application
 		*/
 		
 		// Start New Context by Getting XML Config Files
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationContextConfig.class);
 		
 		// Retrieve Bean Object
 		Coach theCoach = context.getBean("cricketCoach", Coach.class); // Must be same with beans.id in XML config file
