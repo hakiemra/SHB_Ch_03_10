@@ -1,5 +1,7 @@
 package com.hakiemra.ch09;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -44,6 +46,7 @@ public class CricketCoach implements Coach {
 		return this.fortuneService.getFortune();
 	}
 
+    @PostConstruct
     public void doStartupStuff() {
         System.out.println("Starting a CricketCoach Bean in LifeCycle");
     }
