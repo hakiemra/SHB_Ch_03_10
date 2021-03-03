@@ -29,8 +29,8 @@ public class MyApp { // Run as Java Application
 		System.out.println("Object Hash value for theCoach: " + theCoach.toString());
 		System.out.println("Object Hash value for theCoach02: " + theCoach02.toString());
 		System.out.println("theCoach == theCoach02: " + compareInstance.toString());
-		// System.out.println("theCoach and theCoach02 has different Hash value so they are different object.");
-		// System.out.println("It's called PROTOTYPE Bean Scopes.");
+		System.out.println("theCoach and theCoach02 has different Hash value so they are different object.");
+		System.out.println("It's called PROTOTYPE Bean Scopes.");
 		
 		context.close();
 	}
