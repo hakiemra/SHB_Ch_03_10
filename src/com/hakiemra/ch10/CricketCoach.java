@@ -5,6 +5,7 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +15,9 @@ public class CricketCoach implements Coach {
     @Autowired
     @Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
+    @Value("${ch10.coach.name}")
     private String name;
+    @Value("${ch10.coach.email}")
     private String email;
 
     // Empty Constructor
